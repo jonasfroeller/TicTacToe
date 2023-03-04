@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicTacToe</title>
+    <link rel="stylesheet" href="tictactoe.css">
+    <script src="tictactoe.js" defer></script>
+</head>
+
+<body>
+    <h1 class="main-headline">Tic Tac Toe</h1>
+
+    <h2 class="whosTurn"></h2>
+
+    <div class="returnToConfigs">
+        <h2>Configs:</h2>
+        <button class="button" onclick="returnToConfigs()">Change Configs</button>
+        <button class="button" onclick="hideConfigs()">Hide Configs</button>
+    </div>
+
+    <div class="game-board">
+        <div onclick="setItem(this, 0,0)" class="box"></div>
+        <div onclick="setItem(this, 0,1)" class="box"></div>
+        <div onclick="setItem(this, 0,2)" class="box"></div>
+        <div onclick="setItem(this, 1,0)" class="box"></div>
+        <div onclick="setItem(this, 1,1)" class="box"></div>
+        <div onclick="setItem(this, 1,2)" class="box"></div>
+        <div onclick="setItem(this, 2,0)" class="box"></div>
+        <div onclick="setItem(this, 2,1)" class="box"></div>
+        <div onclick="setItem(this, 2,2)" class="box"></div>
+        <div class="playerConfigurations">
+            <div class="top">
+                <div class="headline">
+                    <h1><span class="playerOneColor">Config</span>u<span class="playerTwoColor">ration</span></h1>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="playerConfiguration">
+                    <h1 class="playerOneColor">Player One</h1>
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="(2 to 20 characters)" id="namePlayerOne" name="name" required
+                        minlength="2" maxlength="20" value="">
+                    <div class="button" onclick="chooseName()">Confirm Name</div>
+                    <label for="color">Choose a color (Default is blue)</label>
+                    <input id="colorPlayerOne" name="color" type="color" value="#00ffff">
+                    <div class="button" onclick="chooseColor()">Confirm Color</div>
+                </div>
+                <div class="playerConfiguration">
+                    <h1 class="playerTwoColor">Player Two</h1>
+                    <label for="name">Name</label>
+                    <input type="text" placeholder="(2 to 20 characters)" id="namePlayerTwo" name="name" required
+                        minlength="2" maxlength="20" value="">
+                    <div class="button" onclick="chooseName()">Confirm Name</div>
+                    <label for="color">Choose a color (Default is red)</label>
+                    <input id="colorPlayerTwo" name="color" type="color" value="#ff1491">
+                    <div class="button" onclick="chooseColor()">Confirm Color</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="score">
+        <h2>Scores:</h2>
+        <div class="scorePlayerOne">
+            <h3 class="scorePlayerOne">Player One:</h3>
+        </div>
+        <div class="scorePlayerTwo">
+            <h3 class="scorePlayerTwo">Player Two:</h3>
+        </div>
+    </div>
+
+    <h2 class="winner"></h2>
+
+    <button class="buttonClassic" onclick="newGame()">New Game</button>
+</body>
+
+</html>

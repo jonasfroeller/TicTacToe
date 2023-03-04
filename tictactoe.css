@@ -1,0 +1,266 @@
+/*General*/
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("tictactoe.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    color: aliceblue;
+    overflow-x: hidden;
+}
+
+.main-headline {
+    margin-top: 0;
+    font-size: 3.3em;
+    background-color: rgba(97, 97, 97, 1);
+    border-bottom: 0.125em solid rgb(187, 187, 187);
+    justify-content: space-around;
+}
+
+.whosTurn {
+    background-color: rgba(97, 97, 97, 1);
+    border-top: 0.125em solid rgb(187, 187, 187);
+    border-bottom: 0.125em solid rgb(187, 187, 187);
+    font-size: 30px;
+    width: auto;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.headline {
+    width: 100%;
+}
+
+/*Game-Grid*/
+
+.game-board {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-left: 20%;
+    margin-right: 20%;
+    background: rgb(104, 104, 104);  
+    margin-bottom: 5vh;
+}
+
+.box {
+    background: #444;
+    border: 0.25em solid rgb(109, 109, 109);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 4em;
+    height: 10vw;
+    cursor: pointer;
+    margin: 0.5%;
+}
+
+.box {
+    transition: 0.05s ease-in-out;
+}
+
+.box:hover {
+    filter: brightness(90%);
+}
+
+/*Configs*/
+
+.playerConfigurations {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: rgb(104, 104, 104);
+    border: 0.25em solid rgb(187, 187, 187);
+    color: #fff;
+    font-size: 1.5em;
+    margin-bottom: 1%;
+	-webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+ @-webkit-keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  @keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }  
+
+.playerConfiguration {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(73, 73, 73);
+    height: auto;
+    width: 100%;
+    padding: 1%;
+    margin: 1%;
+    border: 0.25em solid rgb(136, 136, 136);
+}
+
+.playerConfiguration:nth-child(odd) .button:hover {
+    color: rgb(0, 255, 255);
+    border: 0.125em solid rgb(136, 136, 136);
+    cursor: pointer;
+}
+
+.playerConfiguration:nth-child(even) .button:hover {
+    color: rgb(255, 20, 145);
+    border: 0.125em solid rgb(136, 136, 136);
+    cursor: pointer;
+}
+
+.playerOneColor {
+    color: rgb(0, 255, 255);
+}
+
+.playerTwoColor {
+    color: rgb(255, 20, 145);
+}
+
+.top {
+    width: 100%;
+    height: auto;
+}
+
+.bottom {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    height: 10%;
+    width: 50%;
+    background: rgb(44, 44, 44);
+    border: 0.125em solid rgb(87, 87, 87);
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+    padding: 5%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+input[type=text] {
+    font-size: 1.25em;
+    width: 80%;
+}
+
+input[type=color] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.buttonClassic {
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0.125em solid rgb(87, 87, 87);
+    background-color: #444;
+    color: aliceblue;
+    font-size: 2em;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    padding: 1.25%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.buttonClassic:hover {
+    background-color: aliceblue;
+    color: #444;
+}
+
+.score h2, .returnToConfigs h2 {
+    text-decoration: underline;
+}
+
+.score {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    text-align: center;
+    color: rgb(224, 224, 224);
+    font-size: 1.5em;
+    top: 0;
+    right: 0;
+    background: rgb(104, 104, 104);
+    border-left: 0.25em solid rgb(187, 187, 187);
+    border-bottom: 0.25em solid rgb(187, 187, 187);
+    padding: 1%;
+    height: auto;
+    max-width: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.returnToConfigs {
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    text-align: center;
+    color: rgb(224, 224, 224);
+    font-size: 1.5em;
+    top: 0;
+    left: 0;
+    background: rgb(104, 104, 104);
+    border-right: 0.25em solid rgb(187, 187, 187);
+    border-bottom: 0.25em solid rgb(187, 187, 187);
+    padding: 1%;
+    height: auto;
+    max-width: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.returnToConfigs .button {
+    color: rgb(224, 224, 224);
+    background-color: rgb(66, 66, 66);
+    border: 1px solid rgb(136, 136, 136);
+    transition:  0.3s ease-in-out;
+    width: 100%;
+}
+
+.returnToConfigs .button:hover {
+    background-color: rgb(94, 94, 94);
+}
+
