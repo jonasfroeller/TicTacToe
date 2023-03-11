@@ -1,10 +1,15 @@
 /*General*/
-body {
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0;
     padding: 0;
     background-image: url("tictactoe.jpg");
-    background-repeat: no-repeat;
+    background-repeat: repeat-y;
     background-position: center center;
     background-size: cover;
     color: aliceblue;
@@ -12,26 +17,24 @@ body {
 }
 
 .main-headline {
-    margin-top: 0;
-    font-size: 3.3em;
+    top: 0;
+    font-size: 1.25rem;
+    padding: 1rem;
     background-color: rgba(97, 97, 97, 1);
     border-bottom: 0.125em solid rgb(187, 187, 187);
     justify-content: space-around;
+    margin-bottom: 2rem;
 }
 
 .whosTurn {
-    background-color: rgba(97, 97, 97, 1);
-    border-top: 0.125em solid rgb(187, 187, 187);
-    border-bottom: 0.125em solid rgb(187, 187, 187);
-    font-size: 30px;
-    width: auto;
+    font-size: 1rem;
+    color: #868686;
 }
 
 h1 {
     display: flex;
     justify-content: center;
     text-align: center;
-    margin-bottom: 2%;
 }
 
 h2 {
@@ -46,31 +49,38 @@ h2 {
 
 /*Game-Grid*/
 
+main {
+    min-height: 100vh;
+}
+
+main>div {
+    display: flex;
+    justify-content: center;
+}
+
 .game-board {
+    min-width: min(45rem, 75vw);
     position: relative;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
-    margin-left: 20%;
-    margin-right: 20%;
-    background: rgb(104, 104, 104);  
+    background: rgb(104, 104, 104);
     margin-bottom: 5vh;
 }
 
 .box {
+    border: 5px solid rgb(104, 104, 104);
+    aspect-ratio: 1/1;
     background: #444;
-    border: 0.25em solid rgb(109, 109, 109);
     display: flex;
     align-items: center;
     justify-content: center;
+    justify-self: center;
     color: #fff;
     font-size: 4em;
-    height: 10vw;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
     cursor: pointer;
-    margin: 0.5%;
-}
-
-.box {
     transition: 0.05s ease-in-out;
 }
 
@@ -84,7 +94,7 @@ h2 {
     position: absolute;
     top: 0;
     width: 100%;
-    min-height: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -93,45 +103,45 @@ h2 {
     border: 0.25em solid rgb(187, 187, 187);
     color: #fff;
     font-size: 1.5em;
-    margin-bottom: 1%;
-	-webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-	        animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    -webkit-animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
- @-webkit-keyframes slide-in-bottom {
+@-webkit-keyframes slide-in-bottom {
     0% {
-      -webkit-transform: translateY(1000px);
-              transform: translateY(1000px);
-      opacity: 0;
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
     }
+
     100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
     }
-  }
-  @keyframes slide-in-bottom {
+}
+
+@keyframes slide-in-bottom {
     0% {
-      -webkit-transform: translateY(1000px);
-              transform: translateY(1000px);
-      opacity: 0;
+        -webkit-transform: translateY(1000px);
+        transform: translateY(1000px);
+        opacity: 0;
     }
+
     100% {
-      -webkit-transform: translateY(0);
-              transform: translateY(0);
-      opacity: 1;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+        opacity: 1;
     }
-  }  
+}
 
 .playerConfiguration {
     display: flex;
     flex-direction: column;
     align-items: center;
     background: rgb(73, 73, 73);
-    height: auto;
-    width: 100%;
-    padding: 1%;
-    margin: 1%;
+    height: fit-content;
+    padding: 1rem;
     border: 0.25em solid rgb(136, 136, 136);
 }
 
@@ -167,7 +177,7 @@ h2 {
 
 .button {
     height: 10%;
-    width: 50%;
+    width: 75%;
     background: rgb(44, 44, 44);
     border: 0.125em solid rgb(87, 87, 87);
     display: flex;
@@ -212,55 +222,31 @@ input[type=color] {
     color: #444;
 }
 
-.score h2, .returnToConfigs h2 {
-    text-decoration: underline;
-}
-
 .score {
+    word-break: break-all;
     font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
     text-align: center;
     color: rgb(224, 224, 224);
-    font-size: 1.5em;
-    top: 0;
-    right: 0;
+    font-size: 1em;
     background: rgb(104, 104, 104);
-    border-left: 0.25em solid rgb(187, 187, 187);
+    border-top: 0.25em solid rgb(187, 187, 187);
     border-bottom: 0.25em solid rgb(187, 187, 187);
     padding: 1%;
-    height: auto;
-    max-width: 10%;
-    display: flex;
-    flex-direction: column;
-}
-
-.returnToConfigs {
-    font-family: Arial, Helvetica, sans-serif;
-    position: absolute;
-    text-align: center;
-    color: rgb(224, 224, 224);
-    font-size: 1.5em;
-    top: 0;
-    left: 0;
-    background: rgb(104, 104, 104);
-    border-right: 0.25em solid rgb(187, 187, 187);
-    border-bottom: 0.25em solid rgb(187, 187, 187);
-    padding: 1%;
-    height: auto;
-    max-width: 10%;
-    display: flex;
-    flex-direction: column;
-}
-
-.returnToConfigs .button {
-    color: rgb(224, 224, 224);
-    background-color: rgb(66, 66, 66);
-    border: 1px solid rgb(136, 136, 136);
-    transition:  0.3s ease-in-out;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-.returnToConfigs .button:hover {
-    background-color: rgb(94, 94, 94);
+.icon-tr {
+    cursor: pointer;
+    position: absolute;
+    top: 0.25rem;
+    right: 0.25rem;
 }
 
+.icon-tl {
+    cursor: pointer;
+    position: absolute;
+    top: 0.25rem;
+    left: 0.25rem;
+}

@@ -30,7 +30,7 @@ function setItem(boxElement, x, y) {
             currentPlayer = 2;
             boxElement.innerHTML = "x";
             boxElement.style = "opacity: 0.9;"
-            boxElement.style = `border: 0.25em solid ${colorPlayerOne};`;
+            boxElement.style = `border-color: ${colorPlayerOne};`;
             if (namePlayerOne != "") {
                 document.getElementsByClassName('whosTurn')[0].innerHTML = namePlayerTwo + "s Turn";
             } else {
@@ -47,7 +47,7 @@ function setItem(boxElement, x, y) {
             currentPlayer = 1;
             boxElement.innerHTML = "o";
             boxElement.style = "opacity: 0.9;"
-            boxElement.style = `border: 0.25em solid ${colorPlayerTwo};`;
+            boxElement.style = `border-color: ${colorPlayerTwo};`;
             if (namePlayerOne != "") {
                 document.getElementsByClassName('whosTurn')[0].innerHTML = namePlayerOne + "s Turn";
             } else {
@@ -281,38 +281,6 @@ function checkWinner() {
 
         }
     }
-
-    /*
-    switch (gameMatrix) {
-        case ((gameMatrix[0][0] + gameMatrix[0][1] + gameMatrix[0][2]) == 3) || ((gameMatrix[0][0] + gameMatrix[0][1] + gameMatrix[0][2]) == 6):
-            break;
-        case gameMatrix[1][0] == gameMatrix[1][1] == gameMatrix[1][2]:
-
-            break;
-            case gameMatrix[2][0] == gameMatrix[2][1] == gameMatrix[2][2]:
-
-            break;
-        case gameMatrix[0][0] == gameMatrix[1][1] == gameMatrix[2][2]:
-
-            break;
-        case gameMatrix[2][0] == gameMatrix[1][1] == gameMatrix[0][2]:
-
-            break;
-        case gameMatrix[0][0] == gameMatrix[1][0] == gameMatrix[2][0]:
-
-            break;
-        case gameMatrix[0][1] == gameMatrix[1][1] == gameMatrix[2][1]:
-
-            break;
-        case gameMatrix[0][2] == gameMatrix[1][1] == gameMatrix[2][2]:
-
-            break;
-        default:
-            displayLanguage = "Not Defined ";
-            console.log("Doesn't work");
-            break;
-    }
-    */
 }
 
 function chooseName() {
