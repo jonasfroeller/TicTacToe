@@ -4,6 +4,12 @@
     padding: 0;
 }
 
+button, [role="button"], input[type="submit"], input[type="button"], input[type="reset"] {
+    all: unset;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
 html, body {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     margin: 0;
@@ -157,6 +163,11 @@ main>div {
     cursor: pointer;
 }
 
+.playerConfigurations section {
+    max-width: 95rem;
+    margin: 0 2.5rem;
+}
+
 .playerOneColor {
     color: rgb(0, 255, 255);
 }
@@ -172,6 +183,9 @@ main>div {
 
 .bottom {
     display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
     flex-direction: row;
 }
 

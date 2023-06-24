@@ -13,39 +13,43 @@
     <div class="main-headline">
         <h1>Tic Tac Toe</h1>
         <h2 class="whosTurn"></h2>
-        <svg class="icon-tl" onclick="returnToConfigs()" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-            stroke-linejoin="round" class="feather feather-settings">
-            <circle cx="12" cy="12" r="3"></circle>
-            <path
-                d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
-            </path>
-        </svg>
+        <button class="icon-tl" type="button" onclick="returnToConfigs()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                class="feather feather-settings">
+                <circle cx="12" cy="12" r="3"></circle>
+                <path
+                    d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z">
+                </path>
+            </svg>
+        </button>
     </div>
 
     <main>
         <h2 class="winner"></h2>
         <div>
             <div class="game-board">
-                <div onclick="setItem(this, 0,0)" class="box"></div>
-                <div onclick="setItem(this, 0,1)" class="box"></div>
-                <div onclick="setItem(this, 0,2)" class="box"></div>
-                <div onclick="setItem(this, 1,0)" class="box"></div>
-                <div onclick="setItem(this, 1,1)" class="box"></div>
-                <div onclick="setItem(this, 1,2)" class="box"></div>
-                <div onclick="setItem(this, 2,0)" class="box"></div>
-                <div onclick="setItem(this, 2,1)" class="box"></div>
-                <div onclick="setItem(this, 2,2)" class="box"></div>
+                <button type="button" onclick="setItem(this, 0,0)" class="box"></button>
+                <button type="button" onclick="setItem(this, 0,1)" class="box"></button>
+                <button type="button" onclick="setItem(this, 0,2)" class="box"></button>
+                <button type="button" onclick="setItem(this, 1,0)" class="box"></button>
+                <button type="button" onclick="setItem(this, 1,1)" class="box"></button>
+                <button type="button" onclick="setItem(this, 1,2)" class="box"></button>
+                <button type="button" onclick="setItem(this, 2,0)" class="box"></button>
+                <button type="button" onclick="setItem(this, 2,1)" class="box"></button>
+                <button type="button" onclick="setItem(this, 2,2)" class="box"></button>
             </div>
 
             <div class="playerConfigurations">
-                <svg class="icon-tr" onclick="hideConfigs()" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" class="feather feather-x-square">
-                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                    <line x1="9" y1="9" x2="15" y2="15"></line>
-                    <line x1="15" y1="9" x2="9" y2="15"></line>
-                </svg>
+                <button class="icon-tr" type="button" onclick="hideConfigs()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="feather feather-x-square">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="9" y1="9" x2="15" y2="15"></line>
+                        <line x1="15" y1="9" x2="9" y2="15"></line>
+                    </svg>
+                </button>
                 <section>
                     <div class="top">
                         <div class="headline">
@@ -59,20 +63,20 @@
                             <label for="name">Name</label>
                             <input type="text" placeholder="(2 to 20 characters)" id="namePlayerOne" name="name"
                                 required minlength="2" maxlength="20" value="">
-                            <div class="button" onclick="chooseName()">Confirm Name</div>
+                            <button type="button" class="button" onclick="chooseName()">Confirm Name</button>
                             <label for="color">Choose a color (Default is blue)</label>
                             <input id="colorPlayerOne" name="color" type="color" value="#00ffff">
-                            <div class="button" onclick="chooseColor()">Confirm Color</div>
+                            <button type="button" class="button" onclick="chooseColor()">Confirm Color</button>
                         </div>
                         <div class="playerConfiguration">
                             <h1 class="playerTwoColor">Player Two</h1>
                             <label for="name">Name</label>
                             <input type="text" placeholder="(2 to 20 characters)" id="namePlayerTwo" name="name"
                                 required minlength="2" maxlength="20" value="">
-                            <div class="button" onclick="chooseName()">Confirm Name</div>
+                            <button type="button" class="button" onclick="chooseName()">Confirm Name</button>
                             <label for="color">Choose a color (Default is red)</label>
                             <input id="colorPlayerTwo" name="color" type="color" value="#ff1491">
-                            <div class="button" onclick="chooseColor()">Confirm Color</div>
+                            <button type="button" class="button" onclick="chooseColor()">Confirm Color</button>
                         </div>
                     </div>
                 </section>
